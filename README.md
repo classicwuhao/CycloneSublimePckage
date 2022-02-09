@@ -11,3 +11,13 @@ Install this package to highlight cyclone syntax in your sublime text editor.
 7. Browse up a folder and then into the `Installed Packages` folder.
 8. Copy [Cyclone.sublime-package](Cyclone.sublime-package) into the `Installed Packages` folder.
 9. Restart your sublime text editor.
+
+
+## Screenshots
+<img src="./screenshots/sublime_screenshot3.png" width=50% height=50%>
+
+<img src="./screenshots/sublime_screenshot2.png" width=25% height=25%>
+
+<img src="./screenshots/sublime_screenshot4.png" width=50% height=50%>
+
+<img src="./screenshots/sublime_screenshot1.png" width=50% height=50%>
