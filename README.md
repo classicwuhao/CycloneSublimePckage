@@ -1,5 +1,5 @@
 ## Cyclone Sublime Package 
-Install this package to highlight cyclone syntax in your sublime text editor.
+Install this package to highlight [cyclone](https://classicwuhao.github.io/cyclone_tutorial/introduction/introduction.html) syntax in your sublime text editor. 
 
 0. If you have already installed `Package Control`, jump to step 5.
 1. To install Package Control, Open the command palette `win/linux: ctrl+shift+p, Mac:cmd+shift+p`.
