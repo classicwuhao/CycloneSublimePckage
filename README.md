@@ -14,10 +14,10 @@ Install this package to highlight cyclone syntax in your sublime text editor.
 
 
 ## Screenshots
-<img src="./screenshots/sublime_screenshot3.png" width=75% height=75%>
+<img src="./screenshots/sublime_screenshot3.png" width=85% height=85%>
 
 <img src="./screenshots/sublime_screenshot2.png" width=75% height=75%>
 
-<img src="./screenshots/sublime_screenshot4.png" width=75% height=75%>
+<img src="./screenshots/sublime_screenshot4.png" width=85% height=85%>
 
-<img src="./screenshots/sublime_screenshot1.png" width=75% height=75%>
+<img src="./screenshots/sublime_screenshot1.png" width=85% height=85%>
