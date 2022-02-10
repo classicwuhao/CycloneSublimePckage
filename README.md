@@ -8,7 +8,7 @@ Install this package to highlight [cyclone](https://classicwuhao.github.io/cyclo
 4. Restart your sublime text editor.
 5. Donwload [Cyclone.sublime-package](Cyclone.sublime-package).
 6. Click `Preferences -> Browse Packages...` menu.
-7. Browse up a folder and then into the `Installed Packages` folder.
+7. **Browse up** a folder and then into the `Installed Packages` folder (it should be under folder `Sublime Text`).
 8. Copy [Cyclone.sublime-package](Cyclone.sublime-package) into the `Installed Packages` folder.
 9. Restart your sublime text editor.
 
