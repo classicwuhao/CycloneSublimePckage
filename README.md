@@ -1,4 +1,13 @@
-## Cyclone Sublime Package 
+## Cyclone Sublime Package [Lastest update: 17-Mar-2022]
+### Syntax highlight for the following langauge features:
+* Anonymous edges
+* Constants & Variables
+* Standard logic/arithmetic/boolean operators
+* Path operators
+* assert/invariant/where statements
+* fresh/initial statements
+
+### Donwload & Installation
 Install this package to highlight [cyclone](https://classicwuhao.github.io/cyclone_tutorial/tutorial-content.html) syntax in your [sublime text editor](https://www.sublimetext.com/). 
 
 0. If you have already installed `Package Control`, jump to step 5.
@@ -14,9 +23,11 @@ Install this package to highlight [cyclone](https://classicwuhao.github.io/cyclo
 
 
 ## Screenshots
+<img src="./screenshots/sublime_screenshot5.png" width=50% height=50%>
+
 <img src="./screenshots/sublime_screenshot3.png" width=85% height=85%>
 
-<img src="./screenshots/sublime_screenshot2.png" width=75% height=75%>
+<!-- img src="./screenshots/sublime_screenshot2.png" width=75% height=75%-->
 
 <img src="./screenshots/sublime_screenshot4.png" width=85% height=85%>
 
