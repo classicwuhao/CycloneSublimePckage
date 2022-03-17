@@ -1,5 +1,5 @@
 ## Cyclone Sublime Package [Lastest update: 17-Mar-2022]
-### Syntax highlight for the following langauge features:
+### Syntax highlight for the following language features:
 * Anonymous edges
 * Constants & Variables
 * Standard logic/arithmetic/boolean operators
