@@ -1,4 +1,4 @@
-## Cyclone Sublime Package [Lastest update: 17-Mar-2022]
+## Cyclone Sublime Package [Lastest update: 07-April-2022]
 ### Syntax highlight for the following language features:
 * Anonymous edges
 * Constants & Variables
