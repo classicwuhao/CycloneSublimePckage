@@ -1,5 +1,7 @@
-## Cyclone Sublime Package [Lastest update: 30-May-2022]
+## Cyclone Sublime Package [Lastest update: 12-June-2022]
 ### Syntax highlight for the following language features:
+* Member accessor
+* Record data type
 * One predicate
 * Anonymous edges
 * constants & variables
