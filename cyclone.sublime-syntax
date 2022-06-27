@@ -1,0 +1,164 @@
+%YAML 1.2
+---
+# Author: Hao Wu
+# 09-Feb-2022
+# 17-MAR-2022: [const, <->]
+# haowu@cs.nuim.ie
+# @TO-DO:factor rules for more different color schemes.
+name: Cyclone
+file_extensions:
+  - cyclone
+scope: cyclone
+version: 1.0
+
+variables:
+  identifier: \b[[:alpha:]_][[:alnum:]_]*\b 
+  section: '\b(graph|machine|node|state|trans|transition|edge|record)\b'
+  condition: '\b(assert|condition|goal|in)\b'
+  invariant: '\binvariant\b'
+
+contexts:
+  main:
+    - match: '{{section}}'
+      scope: entity.name.class
+      push: 
+        - entity-name
+
+    - match: '{{invariant}}'
+      scope: entity.name.class
+      push:
+          - invariant-name
+
+    - match: '{{identifier}}\.'
+      scope: variable.function
+      push:
+          - member-name
+
+    # Strings begin and end with quotes, and use backslashes as an escape
+    # character
+    - match: '"'
+      scope: punctuation.definition.string.begin.example
+      push:  double_quoted_string
+
+    # Comments begin with a '//' and finish at the end of the line
+    - match: '//'
+      scope: punctuation.definition.comment.example
+      push: line_comment
+
+    - match: ^/\* =(\s*.*?)\s*= \*/$\n?
+      scope: comment.block
+      captures:
+        1: meta.toc-list.banner.block
+    - match: /\*
+      scope: punctuation.definition.comment
+      push:
+        - meta_scope: comment.block
+        - match: \*/
+          scope: punctuation.definition.comment
+          pop: true
+        - match: ^\s*(\*)(?!/)
+          captures:
+            1: punctuation.definition.comment
+    - match: \*/(?!\*)
+      scope: invalid.illegal.stray-comment-end
+    - match: ^// =(\s*.*?)\s*=\s*$\n?
+      scope: comment.line.banner
+      captures:
+        1: meta.toc-list.banner.line
+    - match: //
+      scope: punctuation.definition.comment
+      push:
+        - meta_scope: comment.line.double-slash
+        - match: '(\\)$\n'
+          captures:
+            1: punctuation.separator.continuation
+        - match: \n
+          pop: true
+
+    - match: '{{section}}'
+      scope: keyword.other
+    
+    - match: '{{condition}}'
+      scope: entity.name.type
+
+    - match: '\b(start|final|const|always|some|one)\b'
+      scope: entity.name.tag
+      
+    - match: '\b(abstract|normal)\b'
+      scope:  keyword.other
+
+    - match: '\b(abstract|at|bool|char|enum|final|int|label|record|let|normal|fresh|on|prev|real|start|string|where|with|initial)\b'
+      scope: keyword.other
+
+    - match: '\b(check|for|enumerate|reach|each|stop|via|upto)\b'
+      scope: keyword.operator
+
+    - match: '\b(-)?[0-9.]+\b'
+      scope: constant.numeric
+
+    - match: '\b(true|false)\b'
+      scope: constant.language
+  
+    - match: '(->|<->)'
+      scope: string.type
+
+    - match: '(<<|>>|&&|\|\||!|\^\|\=\>)'
+      scope: keyword.operator.logical
+
+    - match: '(<\=|>\=|\=\=|<|>|\!\=)'
+      scope: keyword.operator.comparison
+
+    - match: '\='
+      scope: keyword.operator.assignment
+
+    - match: '\b(^|>>|<<|_)\b'
+      scope: keyword.operator.bitwise
+
+    - match: '(\+\+|--)'
+      scope: keyword.operator.arithmetic
+
+    - match: '(\+|\-|/|\*)'
+      scope: keyword.operator.arithmetic
+
+    - match: '(\+\=|-\=|\*\=|/\=)'
+      scope: keyword.operator.assignment.augmented
+    
+  entity-name:
+    - match: '{{identifier}}'
+      scope: variable.function
+    - match: \{
+      scope: punctuation.section.group.begin
+      pop: 1
+      #set:   entity-body
+
+  member-name:
+    - match: '{{identifier}}'
+      scope: variable.parameter
+      pop: 1
+
+  invariant-name:
+    - match: '{{identifier}}'
+      scope: variable.language
+    - match: \{
+      scope: punctuation.section.group.begin
+      pop: 1 
+
+  #entity-body:
+  #  - meta_scope: meta.class
+  #  - clear_scopes: 1
+  #  - match: \}
+  #    scope: punctuation.section.group.end
+  #    pop: 2
+
+  double_quoted_string:
+    - meta_scope: string.quoted.double
+    - match: '\\.'
+      scope: constant.character.escape
+    - match: '"'
+      scope: punctuation.definition.string.end
+      pop: true
+
+  line_comment:
+    - meta_scope: comment.line
+    - match: $
+      pop: true
