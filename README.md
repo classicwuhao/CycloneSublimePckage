@@ -1,13 +1,7 @@
 ## Cyclone Sublime Package [Lastest update: 12-June-2022]
-### Syntax highlight for the following language features:
-* Member accessor
-* Record data type
-* One predicate
-* Anonymous edges
-* constants & variables
-* Standard logic/arithmetic/boolean operators
-* Path operators
-* assert/invariant/where statements
-* fresh/initial statements
-* always/some quantifiers
-* options
+### Setup instructions
+0. Dowload `cyclone.sublime-package`
+1. Click `Preferences -> Browse Packages...` menu.
+2. **Browse up** a folder and then into the `Installed Packages` folder (it should be under folder `Sublime Text`).
+3. Copy [Cyclone.sublime-package](Cyclone.sublime-package) into the `Installed Packages` folder.
+4. Restart your sublime text editor. 
