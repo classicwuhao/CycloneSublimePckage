@@ -1,4 +1,4 @@
-## Cyclone Sublime Package [Lastest update: 12-June-2022]
+## Cyclone Sublime Package [Lastest update: 07-July-2023]
 ### Setup instructions
 0. Dowload `cyclone.sublime-package`
 1. Click `Preferences -> Browse Packages...` menu.
