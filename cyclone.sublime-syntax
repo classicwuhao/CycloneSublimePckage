@@ -87,7 +87,7 @@ contexts:
     - match: '\b(abstract|normal)\b'
       scope:  keyword.other
 
-    - match: '\b(abstract|at|bool|char|enum|final|int|label|record|let|normal|fresh|on|prev|real|start|string|where|with|initial)\b'
+    - match: '\b(abstract|at|bool|char|enum|final|int|label|record|let|normal|fresh|on|prev|real|start|string|where|with|initial|bv)\b'
       scope: keyword.other
 
     - match: '\b(check|for|enumerate|reach|each|stop|via|upto)\b'
@@ -120,7 +120,7 @@ contexts:
     - match: '(\+|\-|/|\*)'
       scope: keyword.operator.arithmetic
 
-    - match: '(\+\=|-\=|\*\=|/\=)'
+    - match: '(\+\=|-\=|\*\=|/\=\[\])'
       scope: keyword.operator.assignment.augmented
     
   entity-name:
@@ -161,4 +161,5 @@ contexts:
   line_comment:
     - meta_scope: comment.line
     - match: $
+
       pop: true
