@@ -120,7 +120,7 @@ contexts:
     - match: '(\+|\-|/|\*)'
       scope: keyword.operator.arithmetic
 
-    - match: '(\+\=|-\=|\*\=|/\=\[\])'
+    - match: '(\+\=|-\=|\*\=|/\=)'
       scope: keyword.operator.assignment.augmented
     
   entity-name:
@@ -163,3 +163,4 @@ contexts:
     - match: $
 
       pop: true
+
